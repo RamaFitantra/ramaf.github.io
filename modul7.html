@@ -1,0 +1,261 @@
+<html>
+<head>
+	<title>Modul7</title>
+	<style>
+	.h1{
+		background:gray; 
+		border:1px ; 
+		padding:10px;
+		potition:relative;
+		color:white;
+		}
+	.h1v2{
+		background:gray; 
+		padding:10px;
+		color:white;
+		}
+	.kotak{
+		potition:relative;
+		margin:5% auto;
+		max-height:500px;
+		max-width:1000px;
+		background:url('a.png');
+		box-shadow:0 2px 6px;
+		border-radius:5%;
+		}
+	.kotak2{
+		potition:relative;
+		margin:5% auto;
+		height:172px;
+		width:230px;
+		background:url('a.jpg');
+		box-shadow:0 2px 6px;
+		border-radius:2%;
+		}
+	.table{
+		color:white;
+		align:center;
+		border-collapse: collapse;
+		font-size: 0.9em;
+		font-family: sans-serif;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+		border-radius:2em;
+		}
+	.table thead tr {
+		background-color: #009879;
+		color: #ffffff;
+		text-align: left;
+		}
+	.table th,
+	.table td{
+		padding:12px 15px;
+		}
+		
+	.table tbody tr:nth-of-type(even) {
+		background-color: gray;
+		background-opacity:10%;
+		}
+
+	.table tbody tr:last-of-type {
+		border-bottom: 2px solid black;
+		}
+	.button{
+		padding:10px 55px;
+		border-radius:25px;
+		border:none;
+		margin-top:30px;
+		cursor:pointer;
+		background:gray;
+		font-weight:bold;
+		color:#fff;
+		font-size:18px;
+		transition:all 0.5s;
+		}
+	.button:hover {
+		background-color:black;
+		color:white;
+		}
+	.MyImg{
+		border-radius:50%;
+		width:70px;
+		height:70px;
+		box-shadow:0 2px 4px;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		animation:Spin 3s infinite;
+		}
+	@keyframes Spin{
+		0%{transform:rotate(0deg);}
+		100%{transform:rotate(360deg);}
+		}
+	.table2{
+		padding-left:50px;
+		font-size:30px;
+		padding-top:25px;
+		color:#808080;
+		}
+	.input{
+		margin-top:20px;
+		width:250px;
+		padding:10px 10px 10px 10px;
+		background:#green;
+		border:1px solid gray;
+		transition:width 0.25s, background 0.25s;
+		}
+	.input:focus{
+		width:200px;
+		background:white;
+		box-shadow:0px 2px 4px 0px green;
+		}
+	.kotaklogin1{
+		potition:relative;
+		margin:5% auto;
+		height:430px;
+		width:400px;
+		background:url('z.jpg');
+		box-shadow:0 2px 4px;
+		border-radius:10%;
+		}
+	.kotaklogin2{
+		width:350px;
+		height:320px;
+		background:rgba(76,175,80,0.3)
+		box-shadow:0 2px 4px;
+		border-radius:10%;
+		margin:5% auto;
+		}
+	.buttonlogin{
+		padding:10px 55px;
+		border-radius:25px;
+		margin:auto 100px;
+		border:none;
+		margin-top:30px;
+		cursor:pointer;
+		background:gray;
+		font-weight:bold;
+		color:#fff;
+		font-size:18px;
+		transition:all 0.5s;
+		}
+	.buttonlogin:hover {
+		background-color:black;
+		color:white;
+		}
+	</style>
+	<script>
+	function ShowPage(page)
+	{
+		var Div=document.getElementById('halaman');
+		var html='';
+		if(page==1)
+		{
+			html+='<div class="kotak">';
+			html+='<br>';
+			html+='<h1 class="h1" align="center" >-- PEMIMPIN --</h1>';
+			html+='<center>';
+			html+='<br>';
+			html+='<img class="" src="0.png">';
+			html+='<br>';
+			html+='<br>';
+			html+='<br>';
+			html+='<p><h3>Presiden adalah suatu nama jabatan yang digunakan untuk pimpinan suatu organisasi, perusahaan, perguruan tinggi, atau negara. ... Presiden adalah pimpinan pelaksana perundang-undangan dalam sebuah negara Republik.</h3></p>';
+			html+='<br>';
+			html+='<br>';
+			html+='<br>';
+			html+='<br>';
+			html+='</center>';
+			html+='</div>';
+	}
+		else if(page==2)
+		{
+			html+='<br>';
+			html+='<br>';
+			html+='<center>';
+			html+='<img src="0.png">';
+			html+='</center>';
+			html+='<br>';
+			html+='<br>';
+			html+='<table class="table" align="center" height="" width="" border="0">';
+			html+='<tr>';
+			html+='<th>Presiden</th>';
+			html+='<th>Nama</th>';
+			html+='<th>Foto</th>';
+			html+='</tr>';
+			html+='<tr>';
+			
+			html+='<td>Pertama</td>';
+			html+='<td>Soekarno</td>';
+			html+='<td><img src="1.jpg"></td>';
+			html+='</tr>';
+			html+='<tr>';
+			
+			html+='<td>Kedua</td>';
+			html+='<td>Soeharto</td>';
+			html+='<td><img src="2.jpg"></td>';
+			html+='</tr>';
+			html+='<tr>';
+			
+			html+='<td>Ketiga</td>';
+			html+='<td>B.J.Habibie</td>';
+			html+='<td><img src="3.jpg"></td>';
+			html+='</tr>';
+			
+			html+='<td>Keempat</td>';
+			html+='<td>Abdurrahman Wahid</td>';
+			html+='<td><img src="4.jpg"></td>';
+			html+='</tr>';
+			
+			html+='<td>Kelima</td>';
+			html+='<td>Megawati Soekarnoputri</td>';
+			html+='<td><img src="5.jpg"></td>';
+			html+='</tr>';
+			
+			html+='<td>Keenam</td>';
+			html+='<td>Susilo Bambang Yudhoyono</td>';
+			html+='<td><img src="6.png"></td>';
+			html+='</tr>';
+			
+			html+='<td>Ketuju</td>';
+			html+='<td>Joko Widodo</td>';
+			html+='<td><img src="7.jpg"></td>';
+			html+='</tr>';
+			
+			html+='</table>';
+			
+			
+		}
+		else
+		{
+			html+='<div class="kotaklogin1">';
+			html+='<br>';
+			html+='<h1 align="center" class="h1">LOGIN</h1>';
+			html+='<div class="kotaklogin2">';
+			html+='<img src="75.png" class="MyImg">';
+			html+='<table class="table2">';
+			html+='<tr>';
+			html+='<th><input type="text" class="input" placeholder="Username"></th>';
+			html+='</tr>';
+			html+='<tr>';
+			html+='<th><input type="password" class="input" placeholder="Password"></th>';
+			html+='</tr>';
+			html+='</table>';
+			html+='<input type="button" class="buttonlogin" value="LOGIN">';
+			html+='</div>';
+			html+='</div>';
+		}
+		Div.innerHTML=html;
+	}
+	</script>
+</head>
+<body background="a.jpg" onLoad="ShowPage(1);">
+<h1 class="h1v2" align="center">SELAMAT DATANG</h1>
+<div align="center">
+<input  type="button" class="button" value="Beranda" onclick="ShowPage(1);">
+<input  type="button" class="button" value="Daftar Presiden" onclick="ShowPage(2);">
+<input  type="button" class="button" value="Login" onclick="ShowPage(3);">
+</div>
+<div id="halaman"></div>
+<br>
+</body>
+</html>

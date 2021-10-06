@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Login Karyawan</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body background="bg_login.jpg">
+<form name="formlogin" action="beranda.html" method="post" onsubmit="return validateform()">
+	<br>
+	<div class="kotak2">
+	<br>
+	<h1 class="h1" align="center">LOGIN</h1>
+	<table border="0" align="center"class="table">
+		<tr>
+			<th><input type="text" name="user" class="input" placeholder="Username" ></th>
+		</tr>
+		<tr>
+			<th><input type="password" name="password" class="input" placeholder="Password" ></th>
+		</tr>
+	</table>
+	<br><br>
+	<input type="submit" value="LOGIN" class="vertical-center">
+</div>
+</div>
+<script>
+function validateform(){
+		if(document.forms["formlogin"]["user"].value==""){
+			alert("Username Tidak Boleh Kosong");
+			document.forms["formlogin"]["user"].focus();
+			return false;
+		}
+		if(document.forms["formlogin"]["password"].value==""){
+			alert("Password Tidak Boleh Kosong");
+			document.forms["formlogin"]["password"].focus();
+			return false;
+		}
+	}
+</script>
+</body>
+</html>

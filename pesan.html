@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>Pesan Kopiku</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<ul>
+  <li><a class="active" href="beranda.html">Beranda</a></li>
+  <li><a href="menu.html">Daftar Menu</a></li>
+  <li><a href="pesan.html">Pesan</a></li>
+</ul>
+<div class="">
+<br>
+<h1 class="h1" align="center" style="color:white;">"PESAN KOPIKU "</h1>
+<form name="RamaFitantra">
+	<table class="table-p" align="center" border="0">
+	<thead>
+		<tr>
+		<th>No</th>
+		<th>Produk</th>
+		<th>Harga Satuan</th>
+		<th>Jumlah Beli</th>
+		</tr>
+	</thead>
+		<tr>
+		<td>1</td>
+		<td>Espresso</td>
+		<td>Rp 10.000,00</td>
+		<td><input class="input" type="text" name="espresso" value="0" onkeyup="hitung()"></td>
+		</tr>
+
+		<tr>
+		<td>2</td>
+		<td>Latte</td>
+		<td>Rp 15.000,00</td>
+		<td><input class="input" type="text" name="latte" value="0" onkeyup="hitung()"></td>
+		</tr>
+
+		<tr>
+		<td>3</td>
+		<td>Cappucino</td>
+		<td>Rp 20.000,00</td>
+		<td><input class="input" type="text" name="cappucino" value="0" onkeyup="hitung()"></td>
+		</tr>
+
+		<tr>
+		<td>4</td>
+		<td>Americano</td>
+		<td>Rp 15.000,00</td>
+		<td><input class="input" type="text" name="ameriacano" value="0" onkeyup="hitung()"></td>
+		</tr>
+		
+		<tr>
+		<td>5</td>
+		<td>Macchiato</td>
+		<td>Rp 15.000,00</td>
+		<td><input class="input" type="text" name="macchiato" value="0" onkeyup="hitung()"></td>
+		</tr>
+		
+		<tr>
+		<td>6</td>
+		<td>Milk Shake</td>
+		<td>Rp 20.000,00</td>
+		<td><input class="input" type="text" name="milkshake" value="0" onkeyup="hitung()"></td>
+		</tr>
+		
+		<tr>
+		<td colspan="3">Total Bayar : </td>
+		<td><input class="input" type="text" name="hasil" readonly="true"></td>
+		</tr>
+		<td colspan="2"><td><td><a href="#popup" class="button">Pesan</a></td></td></td>
+	</table>
+	<div class="popup-wrapper" id="popup">
+	<div class="popup-container">
+	<h2>PERHATIAN!!!</h2>
+	<strong>Dengan menekan tombol pesan dibawah ini maka pesanan segara di proses</strong></p>';<a class="popup-close" href="#closed">pesan</a>
+	<br>
+</form>
+</div>
+	<script>
+		function hitung()
+		{
+			var bayar = document.RamaFitantra;
+			var jumespresso = 10000 * parseInt(bayar.espresso.value);
+			var jumlatte = 15000 * parseInt(bayar.latte.value);
+			var jumcappucino = 20000 * parseInt(bayar.cappucino.value);
+			var jumamericano = 15000 * parseInt(bayar.ameriacano.value);
+			var jummacchiato = 15000 * parseInt(bayar.macchiato.value);
+			var jummilkshake = 20000 * parseInt(bayar.milkshake.value);
+			var jumtotal = jumespresso+jumlatte+jumcappucino+jumamericano+jummacchiato+jummilkshake;
+			bayar.hasil.value='Rp '+jumtotal+',00';
+		}
+	</script>
+</body>
+</html>
